@@ -3,10 +3,9 @@ import Product from "@/database/product-model";
 import { generateEmailBody, sendEmail } from "@/nodemailer";
 import { scrapeAmazonProduct } from "@/scraper";
 import { getAveragePrice, getEmailNotifType, getHighestPrice, getLowestPrice } from "@/utils";
-import { connect } from "http2"
 import { NextResponse } from "next/server";
 
-export const maxDuration = 300; // This function can run for a maximum of 300 seconds
+export const maxDuration = 10; 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
