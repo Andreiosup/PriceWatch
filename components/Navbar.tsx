@@ -18,15 +18,16 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           {navIcons.map((item) => (
-            <div className='hover:bg-emerald-400 p-1 rounded-xl'>
+            <div className='hover:bg-emerald-400 p-1 rounded-xl' key={item.alt}>
               <Link href={String(item.link)}>
                 <Image 
-                  key={item.alt}
+             
                   src={item.src}
                   alt={item.alt}
                   width={28}
                   height={28}
                   className="object-contain"
+                  
                 />
               </Link>
             </div>
